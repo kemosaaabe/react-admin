@@ -7,9 +7,14 @@ import { PostList, PostEdit, PostCreate } from "./posts";
 import { Dashboard } from "./Dashboard";
 
 import { dataProvider } from "./dataProvider";
+import { authProvider } from "./authProvider";
 
 export const App = () => (
-  <Admin dataProvider={dataProvider} dashboard={Dashboard}>
+  <Admin
+    dataProvider={dataProvider}
+    authProvider={authProvider}
+    dashboard={Dashboard}
+  >
     <Resource
       name="posts"
       list={PostList}
